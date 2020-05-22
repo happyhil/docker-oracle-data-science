@@ -3,7 +3,8 @@
 Download the oracle instant client drivers. Past all the files into the directory `instantclient_18_5`.
 
 ```bash
-mkdir oracle-datascience/instantclient_18_5
+mkdir instantclient_18_5
+cp ~/instantclient_18_5/. instantclient_18_5/
 ```
 
 Create the image.
@@ -12,7 +13,7 @@ Create the image.
 docker build -t oracle-datascience -f oracle-datascience/Dockerfile .
 ```
 
-Run a container on the image.
+Run a container on the created image.
 ```bash
 docker run -d -P --name <container_name> oracle-datascience
 ```
