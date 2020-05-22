@@ -18,7 +18,7 @@ RUN echo "export VISIBLE=now" >> /etc/profile
 
 # instantclient setup
 RUN mkdir -p /lib/oracle/instantclient_18_5
-COPY oracle-datascience/instantclient_18_5/. /lib/oracle/instantclient_18_5
+COPY instantclient_18_5/. /lib/oracle/instantclient_18_5
 ENV LD_LIBRARY_PATH /lib/oracle/instantclient_18_5/:$LD_LIBRARY_PATH
 ENV PATH /lib/oracle/instantclient_18_5/:$PATH
 ENV NLS_LANG American_America.UTF8
