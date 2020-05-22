@@ -7,10 +7,10 @@ mkdir instantclient_18_5
 cp ~/instantclient_18_5/. instantclient_18_5/
 ```
 
-Create the image.
+Create the image. When you're no in the docker directory, use `-f` to give the path to `Dockerfile`
 
 ```bash
-docker build -t oracle-datascience -f oracle-datascience/Dockerfile .
+docker build -t oracle-datascience .
 ```
 
 Run a container on the created image.
@@ -21,5 +21,5 @@ docker run -d -P --name <container_name> oracle-datascience
 Enter the created container.
 
 ```bash
-docker exec -it gallbase bash
+docker exec -it <container_name> bash
 ```
