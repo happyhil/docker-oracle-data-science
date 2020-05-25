@@ -23,3 +23,14 @@ Enter the created container.
 ```bash
 docker exec -it <container_name> bash
 ```
+
+As you can see in the Dockerfile, port 22 and port 8080 are being exposed during the image creation. If you would like to see on which ports on you hosts the exposed ports are mapped, you can use the following command:
+
+```bash
+docker port <container_name> <port>
+```
+
+Use the following command to get to local IP address on which the container is running.
+
+```bash
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" <container_name>
